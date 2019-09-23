@@ -11,3 +11,4 @@ applications:
   services:
   - tracker-timesheets-database5
   - tracker-service-registry3
+  - circuit-breaker-service3
