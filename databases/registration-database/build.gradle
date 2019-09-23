@@ -1,6 +1,6 @@
 databases {
     devDatabase = "tracker_registration_dev"
     testDatabase = "tracker_registration_test"
-    cfDatabase = "tracker-registration-database3"
+    cfDatabase = "tracker-registration-database5"
     cfApp = "tracker-registration3"
 }

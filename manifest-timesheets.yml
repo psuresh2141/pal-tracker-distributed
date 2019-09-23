@@ -9,5 +9,5 @@ applications:
     #REGISTRATION_SERVER_ENDPOINT: https://registration-pal-ann-suresh.apps.dev.pcf-aws.com
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
   services:
-  - tracker-timesheets-database3
+  - tracker-timesheets-database5
   - tracker-service-registry3
