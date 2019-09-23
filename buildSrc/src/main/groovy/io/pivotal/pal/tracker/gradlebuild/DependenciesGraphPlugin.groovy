@@ -40,17 +40,15 @@ class DependenciesGraphPlugin implements Plugin<Project> {
                             Configuration compileConfig = subProject.configurations["compile"]
 
                             compileConfig
-                                .dependencies
-                                .grep { it.respondsTo("getDependencyProject") && !isProjectExcluded(it) }
-                                .forEach { dotFile << """  "$subProject.name" -> "$it.dependencyProject.name"\n""" }
+                                    .dependencies
+                                    .grep { it.respondsTo("getDependencyProject") && !isProjectExcluded(it) }
+                                    .forEach { dotFile << """  "$subProject.name" -> "$it.dependencyProject.name"\n""" }
                         } catch (UnknownConfigurationException ignored) {
                         }
                     }
-
                     dotFile << "}\n"
                 }
             }
-
             task("dependenciesGraph", dependsOn: "dependenciesGraphDot", type: Exec) {
                 workingDir "$buildDir/dependenciesGraph"
                 commandLine "dot", "-O", "-Tpng", "graph.dot"
@@ -59,7 +57,6 @@ class DependenciesGraphPlugin implements Plugin<Project> {
             }
         }
     }
-
     private static boolean isProjectExcluded(def project) {
         return project.name.contains("support")
     }
