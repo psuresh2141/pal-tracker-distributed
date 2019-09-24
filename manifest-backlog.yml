@@ -7,8 +7,9 @@ applications:
   instances: 1
   env:
     JBP_CONFIG_OPEN_JDK_JRE: "{ jre: { version: 11.+ } }"
-    JAVA_OPTS: "-XX:MaxMetaspaceSize=80780K -Xss512k -Xmx200M -XX:ReservedCodeCacheSize=16M -XX:MaxDirectMemorySize=16M"
+    GRANT_TYPE: client_credentials
   services:
   - tracker-backlog-database5
   - tracker-service-registry3
   - circuit-breaker-service3
+  - tracker--sso3
