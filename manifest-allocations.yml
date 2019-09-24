@@ -8,8 +8,10 @@ applications:
   env:
     JBP_CONFIG_OPEN_JDK_JRE: "{ jre: { version: 11.+ } }"
     GRANT_TYPE: client_credentials
+    MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE: *
   services:
   - tracker-allocations-database5
   - tracker-service-registry3
   - circuit-breaker-service3
   - tracker-sso3
+  - tracker-config-server3
