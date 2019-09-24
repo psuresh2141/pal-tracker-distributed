@@ -8,8 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 import java.util.TimeZone;
 
-@EnableEurekaClient
-@EnableCircuitBreaker
+@EnableEurekaClien
 @SpringBootApplication
 @ComponentScan({
     "io.pivotal.pal.tracker.accounts",
