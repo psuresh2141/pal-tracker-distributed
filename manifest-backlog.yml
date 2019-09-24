@@ -12,4 +12,4 @@ applications:
   - tracker-backlog-database5
   - tracker-service-registry3
   - circuit-breaker-service3
-  - tracker--sso3
+  - tracker-sso3
