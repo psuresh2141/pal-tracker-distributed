@@ -21,6 +21,7 @@ import java.util.TimeZone;
 @EnableEurekaClient
 @EnableOAuth2Client
 @SpringBootApplication
+
 @ComponentScan({"io.pivotal.pal.tracker.allocations", "io.pivotal.pal.tracker.restsupport"})
 public class App {
 
